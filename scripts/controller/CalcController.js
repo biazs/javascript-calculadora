@@ -35,7 +35,8 @@ class CalcController{
         this._operation = [];
         this.lastNumber = '';
         this.lastOperator = '';
-        this.setLastNumberToDisplay();
+        this.displayCalc = '0';
+        //this.setLastNumberToDisplay();
     }
 
     clearEntry(){
