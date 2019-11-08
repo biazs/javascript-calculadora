@@ -82,7 +82,7 @@ class CalcController{
     }
 
     initKeyBoard(){
-        
+
         document.addEventListener('keyup', e => {
 
             this.playAudio();
@@ -368,6 +368,11 @@ class CalcController{
         return this._displayCalcEl.innerHTML;
     }
     set displayCalc(value){
+
+        if(value.toString().length > 10){
+            this.setError();
+            return false;
+        }
         this._displayCalcEl.innerHTML = value;
     }
 
